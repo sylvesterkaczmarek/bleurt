@@ -1,0 +1,36 @@
+{
+  "repo": "google-research/bleurt",
+  "base_branch": "master",
+  "base": "cebe7e6f996b40910cfaa520a63db47807e3bf5c",
+  "source": "bleurt/score_files.py",
+  "test": "bleurt/score_json_test.py",
+  "issue": 67,
+  "issue_url": "https://github.com/google-research/bleurt/issues/67",
+  "new_counts": [
+    19,
+    9
+  ],
+  "suite_files": [
+    "bleurt/score_test.py",
+    "bleurt/score_not_eager_test.py",
+    "bleurt/score_files_test.py",
+    "bleurt/finetune_test.py",
+    "bleurt/length_batching_test.py"
+  ],
+  "baseline_failure_nodes": {
+    "bleurt/score_test.py": [],
+    "bleurt/score_not_eager_test.py": [],
+    "bleurt/score_files_test.py": [],
+    "bleurt/finetune_test.py": [
+      "bleurt.finetune_test.FinetuneTest::test_finetune_change_input_len",
+      "bleurt.finetune_test.FinetuneTest::test_finetune_from_bert",
+      "bleurt.finetune_test.FinetuneTest::test_finetune_from_bleurt"
+    ],
+    "bleurt/length_batching_test.py": [
+      "bleurt.length_batching_test.FinetuneTest::test_finetune_and_predict"
+    ]
+  },
+  "branch": "fix/preserve-json-sentence-strings-20260928",
+  "title": "Preserve sentence strings when reading JSONL scoring inputs",
+  "head": "9e90fe126a6a1b5a37174141a467a40ab47cf59a"
+}
